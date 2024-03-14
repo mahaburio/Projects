@@ -1,0 +1,398 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section{
+  min-height: 100vh;
+  padding: 0 30px;
+  width: 100%;
+  padding-top: 25px;
+  background-color: #EFEAE3;
+  position: relative;
+  
+}
+
+.navbar-section{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: #37312C;
+  display: inline-block;
+  padding: 12px 22px;
+  margin-right: 8px;
+  text-transform: capitalize;
+  border: 1px solid #C1BCB6;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+}
+
+
+.nav-item a::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: inherit;
+  bottom: -100%;
+  background-color: #000;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  z-index: -1;
+
+}
+
+.nav-item a:hover::after{
+  bottom: 0;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+}
+
+.nav-item a:hover{
+  color: #fff;
+}
+
+/* !========== CONTENT-SECTION =========== */
+
+.content-section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background-color: #EFEAE3;
+  position: relative;
+  border-bottom: 1px solid #C1BCB6;
+  
+}
+
+.content-section .left{
+  padding-bottom: 80px;
+
+}
+
+.content-section .left h4{
+  font-size: 1.9vw;
+  letter-spacing: -1.5px;
+}
+
+.content-section .right{
+  align-self: center;
+  padding-right: 20px;
+  padding-top: 45px;
+
+
+}
+
+.content-section .right h1{
+  font-size: 11vw;
+  text-transform: uppercase;
+  letter-spacing: -10px;
+  text-align: right;
+  line-height: 130px;
+}
+
+.hero-section .shadow .shape-1{
+  position: absolute;
+  left: 50vw;
+  top: 100vh;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-color: orangered;
+  filter: blur(20px);
+  animation-name: anime1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 2;
+}
+
+.hero-section .shadow .shape-2{
+  position: absolute;
+  left: 60vw;
+  top: 90vh;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-color: orangered;
+  filter: blur(20px);
+  animation-name: anime2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 2;
+}
+
+.hero-section .shadow .shape-3{
+  position: absolute;
+  left: 68vw;
+  top: 95vh;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background-color: orangered;
+  filter: blur(20px);
+}
+
+@keyframes  anime1{
+  from{
+    transform: translateY(-10%);
+  }
+  to{
+    ransform: translateY(20%);
+  }
+}
+
+@keyframes  anime2{
+  from{
+    transform: translate(-10%, 20%);
+  }
+  to{
+    ransform: translate(20%, 0%);
+  }
+}
+
+
+#heroSection video{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  margin-top: 4vw;
+  z-index: 50;
+}
+
+
+/* ?==== AUTO PLAY TEXT SECTION ==== */
+
+.autoplay-text{
+  height: 50vh;
+  margin-top: 10vh;
+}
+
+.moving-text{
+  position: relative; 
+  display: flex;
+  overflow: hidden;  
+}
+
+
+
+.moving-text::-webkit-scrollbar{
+  display: none;
+}
+
+.autoplay-text .text{
+  position: relative;
+  display: flex;
+  animation: moving-text 10s linear infinite ;
+}
+
+.autoplay-text .text h1{
+  font-size: 9vw;
+  position: relative;
+  margin-right: 5vw;
+  text-transform: uppercase;
+  padding-right: 50px;
+}
+
+.autoplay-text .text h1::before{
+  content: '';
+  position: absolute;
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  top: 20px;
+  left: -100px;
+  margin: 20px;
+  background-color: orangered;
+}
+
+@keyframes moving-text {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/* ?==== SECTION TWO==== */
+
+.section-two{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #EFEAE3;
+}
+
+.section-two .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.section-two .container .left{
+  width: 75%;
+  padding-left: 60px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.section-two .container .left h1{
+  font-size: 4.7vw;
+  letter-spacing: -4px;
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.section-two .container .left .shape1{
+  position: absolute;
+  right: 0;
+  top: 45%;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(20px);
+  background-color: orangered;
+  animation: shape1 3s infinite linear alternate;
+
+}
+
+@keyframes shape1 {
+  from{
+    transform: translateY(-50px)
+  }
+  to{
+    transform: translateY(50px)
+  }
+}
+.section-two .container .left .shape2{
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(20px);
+  background-color: orangered;
+  animation: shape2 5s infinite linear alternate;
+
+}
+
+@keyframes shape2 {
+  from{
+    transform: translate(-50px, 50px)
+  }
+  to{
+    transform: translate(200px, -200px)
+  }
+}
+
+.section-two .container .right{
+  height: 100%;
+  width: 30%;
+  align-self: center;
+}
+
+.section-two .container .right .head{
+  width: 80%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.section-two .container .right .head img{
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.section-two .container .right .foot{
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+
+}
+
+.section-two .container .right .foot p{
+  font-size: 1em;
+  color: #59534D;
+  letter-spacing: -0.9px;
+}
+
+
+/* !==== SECTION THREE==== */
+
+.section-three{
+  min-height: 100vh;
+  background-color: #EFEAE3;
+  padding-top: 2vw;
+}
+
+.section-three .container .box-one{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+  padding: 0px 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.section-three .container .box-one::after{
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  left: 0;
+  background-color: orange;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.section-three .container .box-one:hover::after{
+  height: 100%;
+  transition: 0.2s;
+
+
+}
+
